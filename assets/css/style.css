@@ -1,0 +1,53 @@
+/* 
+Dark BG color: #1e293b
+Main Font color: #94A3B8
+Accent color: #22d3ee
+Header Font color: #f8fafc
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 62.5%;
+    color: #94a3b8;
+}
+
+body {
+    background-color: #1e293b;
+    padding: 0 25px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header-content h3 {
+    color: #22d3ee;
+    font-size: 1.6rem;
+}
+.header-content h1 {
+    color: #f8fafc;
+    font-size: 4rem;
+}
+.header-content h2 {
+    color: #94a3b8;
+    font-size: 3rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin: auto;
+    max-width: 100px;
+}
+
+.socials .social a i {
+    color: #94a3b8;
+    font-size: 25px;
+}
