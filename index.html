@@ -20,6 +20,7 @@
 </head>
 
 <body>
+  <div id="top"></div>
   <header>
     <nav class="navbar">
       <h1 class="logo">
@@ -30,7 +31,7 @@
 
       <div class="desktop-only">
         <ul class="nav-links">
-          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a href="#top">Home</a></li>
           <li class="nav-link"><a href="#">About Me</a></li>
           <li class="nav-link"><a href="#">My Projects</a></li>
           <li class="nav-link"><a href="#">Work Flow</a></li>
@@ -41,9 +42,9 @@
       <div class="mobile-only">
         <aside class="mobile-nav">
           <ul class="nav-links">
-            <li class="nav-link"><a href="#">About Me</a></li>
-            <li class="nav-link"><a href="#">My Projects</a></li>
-            <li class="nav-link"><a href="#">Work Flow</a></li>
+            <li class="nav-link"><a href="#about">About Me</a></li>
+            <li class="nav-link"><a href="#work">My Projects</a></li>
+            <li class="nav-link"><a href="#work-flow">Work Flow</a></li>
             <li class="nav-link"><a href="#">Contact</a></li>
           </ul>
         </aside>
@@ -68,7 +69,42 @@
 
     <section id="about">
       <h2 class="numbered-heading">
-        About Me
+        <span class="numbered-heading-num">01.</span>About Me
+      </h2>
+      <div class="about-content">
+        <div class="about-text">
+          <br>
+          Hello! My name is Tomo and I love to create things on the internet. I started to show interests in web
+          development back in 2020 and decided to teach myself to code.
+          I currently build up website (<a href="#" style="text-decoration: underline; cursor: pointer;">past work
+            below</a>) clients, where they can leave
+          everything from picking out a design to deploying the site all up to me.
+          </p>
+          <p>
+            Below are technologies I've been working with recently:
+          </p>
+        </div>
+        <ul class="about-skills">
+          <li class="skill">HTML / CSS</li>
+          <li class="skill">JavaScript</li>
+          <li class="skill">React</li>
+          <li class="skill">Python</li>
+        </ul>
+      </div>
+      <div class="about-img">
+        <img src="/assets/imgs/avatar.png" alt="Logo">
+      </div>
+    </section>
+
+    <section id="work">
+      <h2 class="numbered-heading">
+        <span class="numbered-heading-num">02.</span>Things I've Built
+      </h2>
+    </section>
+
+    <section id="work-flow">
+      <h2 class="numbered-heading">
+        <span class="numbered-heading-num">03.</span>Work Flow
       </h2>
     </section>
   </main>

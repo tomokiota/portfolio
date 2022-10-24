@@ -5,8 +5,13 @@ const UIMobileNav = document.querySelector(".mobile-nav");
 const UIMain = document.querySelector("main");
 const UINavLinks = document.querySelectorAll(".nav-link");
 const UIHeader = document.querySelector("header");
-
 let showMenu = false;
+
+// UI Elements for Project Cards Animations
+const projectsCard = document.querySelectorAll(".projects-card");
+const infoBtn = document.querySelectorAll(".projects-card-info");
+const flapCard = document.querySelectorAll(".projects-card-flap");
+let showInfo = false;
 
 UIHamburgerBar.addEventListener("click", toggleMenu);
 window.addEventListener("scroll", addHeaderBg);
@@ -42,4 +47,25 @@ function addHeaderBg() {
         UIHeader.style.background = "transparent";
         UIHeader.classList.remove("box-shadow");
     }
+}
+
+// Toggle open / close on Project items
+for (let j = 0; j < infoBtn.length; j++) {
+    infoBtn[j].addEventListener("click", function () {
+        if (!showInfo) {
+            for (let k = 0; k < this.children.length; k++) {
+                this.children[k].classList.add("open");
+            }
+            flapCard[j].classList.add("open");
+            projectsCard[j].classList.add("open");
+            showInfo = true;
+        } else {
+            for (let k = 0; k < this.children.length; k++) {
+                this.children[k].classList.remove("open");
+            }
+            flapCard[j].classList.remove("open");
+            projectsCard[j].classList.remove("open");
+            showInfo = false;
+        }
+    });
 }
