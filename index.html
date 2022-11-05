@@ -71,28 +71,30 @@
       <h2 class="numbered-heading">
         <span class="numbered-heading-num">01.</span>About Me
       </h2>
-      <div class="about-content">
-        <div class="about-text">
-          <br>
-          Hello! My name is Tomo and I love to create things on the internet. I started to show interests in web
-          development back in 2020 and decided to teach myself to code.
-          I currently build up website (<a href="#work" style="text-decoration: underline; cursor: pointer;">past work
-            below</a>) clients, where they can leave
-          everything from picking out a design to deploying the site all up to me.
-          </p>
-          <p>
-            Below are technologies I've been working with recently:
-          </p>
+      <div class="about-inner">
+        <div class="about-content">
+          <div class="about-text">
+            <br>
+            Hello! My name is Tomo and I love to create things on the internet. I started to show interests in web
+            development back in 2020 and decided to teach myself to code.
+            I currently build up website (<a href="#work" style="text-decoration: underline; cursor: pointer;">past work
+              below</a>) clients, where they can leave
+            everything from picking out a design to deploying the site all up to me.
+            </p>
+            <p>
+              Below are technologies I've been working with recently:
+            </p>
+          </div>
+          <ul class="about-skills">
+            <li class="skill">HTML / CSS</li>
+            <li class="skill">JavaScript</li>
+            <li class="skill">React</li>
+            <li class="skill">Python</li>
+          </ul>
         </div>
-        <ul class="about-skills">
-          <li class="skill">HTML / CSS</li>
-          <li class="skill">JavaScript</li>
-          <li class="skill">React</li>
-          <li class="skill">Python</li>
-        </ul>
-      </div>
-      <div class="about-img">
-        <img src="/assets/imgs/avatar.png" alt="Logo">
+        <div class="about-img">
+          <img src="/assets/imgs/avatar.png" alt="Logo">
+        </div>
       </div>
     </section>
 
@@ -236,14 +238,30 @@
       <h2 class="numbered-heading">
         <span class="numbered-heading-num">04.</span>Get In Touch
       </h2>
-      <form class="contact-form" action="" method="post">
-        <input type="text" name="name" id="name" placeholder="お名前">
-        <input type="email" name="email" id="email" placeholder="メール">
+      <form class="contact-form" action="https://formsubmit.co/tomoki_ota@outlook.com" method="post">
+        <div class="input-group">
+          <input type="text" name="name" id="name" placeholder="お名前">
+          <input type="email" name="email" id="email" placeholder="メール">
+        </div>
         <textarea name="message" id="message" cols="30" rows="10" placeholder="メッセージ(任意)"></textarea>
-        <button type="submit" class="form-submit">送信</button>
+        <div class="submit-container">
+          <button type="submit" class="form-submit">メッセージを送信</button>
+        </div>
       </form>
     </section>
   </main>
+
+  <footer>
+    <nav class="footer-navbar">
+      <ul class="footer-socials">
+        <li><a href="https://www.twitter.com/_tomo96" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="https://github.com/tomokiota" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+      </ul>
+      <p class="credit">
+        Designed & Built by Tomo
+      </p>
+    </nav>
+  </footer>
 
 </body>
 

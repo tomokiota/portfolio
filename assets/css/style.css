@@ -4,6 +4,7 @@ Main Font color: #94A3B8
 Accent color: #22d3ee
 Header Font color: #f8fafc
 Card color: #17202e
+2nd Card Color: #253248
 */
 
 :root {
@@ -13,6 +14,7 @@ Card color: #17202e
     --accent-color: #22d3ee;
     --header-font-color: #f8fafc;
     --card-color: #17202e;
+    --second-card-color: #253248;
 }
 
 * {
@@ -25,7 +27,8 @@ html {
     font-family: var(--main-font-family);
     font-size: 62.5%;
     color: var(--main-font-color);
-    scroll-padding-top: 100px;
+    scroll-padding-top: 75px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -44,6 +47,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 9;
+    transition: all 0.2s ease-in-out;
 }
 
 header.box-shadow {
@@ -235,13 +239,16 @@ body.blur {
 .hero-content h3 {
     color: var(--accent-color);
     font-size: 1.6rem;
+    margin-bottom: 7px;
 }
 .hero-content h1 {
     color: var(--header-font-color);
     font-size: 4rem;
+    margin-bottom: 7px;
 }
 .hero-content h2 {
     font-size: 3rem;
+    margin-bottom: 7px;
 }
 
 .hero-content p {
@@ -314,7 +321,7 @@ ul.about-skills .skill {
     position: relative;
     margin-bottom: 10px;
     padding-left: 20px;
-    font-size: 1.3rem;
+    font-size: 14px;
 }
 
 ul.about-skills .skill::before {
@@ -322,7 +329,7 @@ ul.about-skills .skill::before {
     position: absolute;
     left: 0px;
     color: var(--accent-color);
-    line-height: 12px;
+    line-height: 15px;
 }
 
 .about-img {
@@ -344,11 +351,32 @@ ul.about-skills .skill::before {
 .work-card {
     display: flex;
     flex-direction: column;
-    background-color: var(--card-color);
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     margin: 2rem 0px;
     padding: 40px 30px;
+    position: sticky;
+}
+
+.work-card:nth-of-type(odd) {
+    background-color: var(--card-color);
+}
+
+.work-card:nth-of-type(even) {
+    background-color: var(--second-card-color);
+}
+
+.work-card:nth-of-type(1) {
+    top: 10rem;
+}
+.work-card:nth-of-type(2) {
+    top: 12rem;
+}
+.work-card:nth-of-type(3) {
+    top: 14rem;
+}
+.work-card:nth-of-type(4) {
+    top: 16rem;
 }
 
 .work-card .left {
@@ -422,12 +450,12 @@ ul.about-skills .skill::before {
 
 .work-flow-card i {
     color: var(--header-font-color);
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .work-flow-card h3 {
     color: var(--accent-color);
-    font-size: clamp(22px, 5vw, 28px);
+    font-size: 22px;
 }
 
 .work-flow-desc {
@@ -437,16 +465,16 @@ ul.about-skills .skill::before {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     background: var(--card-color);
     border-radius: 10px;
     padding: 50px 30px;
+    margin-bottom: 50px;
 }
 
 .contact-form input {
     border-radius: 25px;
     padding: 15px;
-
+    margin-bottom: 20px;
     border: 1px solid var(--main-font-color);
     background: var(--header-font-color);
     display: block;
@@ -459,6 +487,7 @@ ul.about-skills .skill::before {
     background: var(--header-font-color);
     border-radius: 25px;
     padding: 16px 15px;
+    margin-bottom: 20px;
     outline: none;
 }
 
@@ -468,16 +497,49 @@ ul.about-skills .skill::before {
     border: none;
 }
 
+.submit-container {
+    width: 100%;
+    text-align: center;
+}
+
 .form-submit {
+    display: inline-block;
     color: var(--accent-color);
     background-color: transparent;
     border: 1px solid var(--accent-color);
-    border-radius: 25px;
-    padding: 15px;
+    border-radius: 4px;
+    padding: 20px 28px;
+    margin-inline: auto;
     font-size: 1.6rem;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin: 0px auto 10px;
+    font-size: 24px;
+}
+
+p.credit {
+    font-size: 14px;
+    padding: 10px;
 }
 
 ul {
@@ -491,4 +553,148 @@ a {
 
 section {
     padding: 60px 0;
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+@media only screen and (min-width: 769px) {
+    main {
+        padding: 0 100px;
+    }
+
+    header {
+        padding: 0 40px;
+    }
+
+    header .mobile-only {
+        display: none;
+    }
+
+    header .desktop-only {
+        display: block;
+    }
+
+    .desktop-only .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+    }
+
+    .desktop-only .nav-links .nav-link {
+        counter-increment: nav-counter 1;
+        margin: 0px 5px;
+        position: relative;
+        font-size: 13px;
+    }
+
+    .desktop-only .nav-links .nav-link::before {
+        content: "0" counter(nav-counter) ".";
+        color: var(--accent-color);
+    }
+
+    .desktop-only .nav-links .nav-link a {
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding-bottom: 0;
+    }
+
+    .hero-content h3 {
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(40px, 7vw, 70px);
+        margin-bottom: 0;
+        line-height: 1.1;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(40px, 7vw, 70px);
+        margin-bottom: 0;
+        line-height: 0.9;
+    }
+
+    .hero-content p {
+        margin: 25px 0 0;
+        max-width: 540px;
+    }
+
+    .about-inner {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 50px;
+    }
+
+    .about-img {
+        margin: 0px auto 0px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .work-card {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 75px;
+    }
+
+    .work-live-site {
+        display: inline-block;
+        padding: 20px 28px;
+        font-size: 14px;
+    }
+
+    .work-flow-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .work-flow-card {
+        flex: 1 1 calc(50% - 25px);
+        margin: 0;
+    }
+
+    #contact {
+        margin-bottom: 100px;
+    }
+
+    .contact-form {
+        max-width: 750px;
+        margin-inline: auto;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .footer-socials {
+        flex-direction: column;
+        gap: 25px;
+        position: fixed;
+        left: 40px;
+        right: auto;
+        bottom: 50px;
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 1345px) {
+    main {
+        padding: 0 150px;
+    }
+
+    header {
+        padding: 0 50px;
+    }
+
+    .footer-socials {
+        left: 50px;
+    }
 }

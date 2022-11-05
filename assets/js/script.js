@@ -46,9 +46,11 @@ for (let i = 0; i < UINavLinks.length; i++) {
 function addHeaderBg() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
         UIHeader.style.background = "#1e293b";
+        UIHeader.style.height = "75px";
         UIHeader.classList.add("box-shadow");
     } else {
         UIHeader.style.background = "transparent";
+        UIHeader.style.height = "100px";
         UIHeader.classList.remove("box-shadow");
     }
 }
