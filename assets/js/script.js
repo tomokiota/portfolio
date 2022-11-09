@@ -55,26 +55,26 @@ function addHeaderBg() {
     }
 }
 
-// Toggle open / close on Project items
-for (let j = 0; j < infoBtn.length; j++) {
-    infoBtn[j].addEventListener("click", function () {
-        if (!showInfo) {
-            for (let k = 0; k < this.children.length; k++) {
-                this.children[k].classList.add("open");
-            }
-            flapCard[j].classList.add("open");
-            projectsCard[j].classList.add("open");
-            showInfo = true;
-        } else {
-            for (let k = 0; k < this.children.length; k++) {
-                this.children[k].classList.remove("open");
-            }
-            flapCard[j].classList.remove("open");
-            projectsCard[j].classList.remove("open");
-            showInfo = false;
-        }
-    });
-}
+// // Toggle open / close on Project items
+// for (let j = 0; j < infoBtn.length; j++) {
+//     infoBtn[j].addEventListener("click", function () {
+//         if (!showInfo) {
+//             for (let k = 0; k < this.children.length; k++) {
+//                 this.children[k].classList.add("open");
+//             }
+//             flapCard[j].classList.add("open");
+//             projectsCard[j].classList.add("open");
+//             showInfo = true;
+//         } else {
+//             for (let k = 0; k < this.children.length; k++) {
+//                 this.children[k].classList.remove("open");
+//             }
+//             flapCard[j].classList.remove("open");
+//             projectsCard[j].classList.remove("open");
+//             showInfo = false;
+//         }
+//     });
+// }
 
 // Swiper JS
 new Swiper("#swiper-2", {
