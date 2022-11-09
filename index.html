@@ -17,17 +17,23 @@
   <title>Tomo</title>
   <meta name="description"
     content="Tomo is a web developer specializing in building websites for clients supporting everything from design to deploying">
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5da99cbb43.js" crossorigin="anonymous"></script>
+
   <!-- Google Fonts: Noto Sans JP -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <!-- Favicon -->
   <link rel="shortcut icon" href="/assets/imgs/favicon.svg" type="image/x-icon">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="/assets/js/script.js" async></script>
 </head>
 
 <body>
@@ -42,10 +48,10 @@
 
       <div class="desktop-only">
         <ul class="nav-links">
-          <li class="nav-link"><a href="#top">Home</a></li>
           <li class="nav-link"><a href="#about">About Me</a></li>
           <li class="nav-link"><a href="#work">My Projects</a></li>
           <li class="nav-link"><a href="#work-flow">Work Flow</a></li>
+          <li class="nav-link"><a href="#templates">Design Templates</a></li>
           <li class="nav-link"><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -56,6 +62,7 @@
             <li class="nav-link"><a href="#about">About Me</a></li>
             <li class="nav-link"><a href="#work">My Projects</a></li>
             <li class="nav-link"><a href="#work-flow">Work Flow</a></li>
+            <li class="nav-link"><a href="#templates">Design Templates</a></li>
             <li class="nav-link"><a href="#contact">Contact</a></li>
           </ul>
         </aside>
@@ -128,7 +135,7 @@
           </div>
           <div class="right">
             <div class="work-card-img">
-              <img src="/assets/imgs/project-img-1.png" alt="Project preview image">
+              <img src="/assets/imgs/yourrich.png" alt="Preview image for Yourrich's website.">
             </div>
           </div>
         </div>
@@ -151,7 +158,7 @@
           </div>
           <div class="right">
             <div class="work-card-img">
-              <img src="/assets/imgs/project-img-2.png" alt="Project preview image">
+              <img src="/assets/imgs/eitai-tech.png" alt="Preview image for Eitai Tech's website.">
             </div>
           </div>
         </div>
@@ -174,7 +181,7 @@
           </div>
           <div class="right">
             <div class="work-card-img">
-              <img src="/assets/imgs/project-img-3.png" alt="Project preview image">
+              <img src="/assets/imgs/alivorte.png" alt="Preview image for Alivorte's website.">
             </div>
           </div>
         </div>
@@ -197,7 +204,7 @@
           </div>
           <div class="right">
             <div class="work-card-img">
-              <img src="/assets/imgs/project-img-4.png" alt="Project preview image">
+              <img src="/assets/imgs/ani-gen.png" alt="Preview image for AniGen website.">
             </div>
           </div>
         </div>
@@ -214,21 +221,24 @@
           <i class="fa-solid fa-comments flow-item-icon"></i>
           <h3>ミーティング</h3>
           <p class="work-flow-desc">
-            想像しているデザインを具現化するためにビデオ会議でミーティングを行います。参考となるサイトを基に作成することも可能です。
-          </p>
-        </li>
-        <li class="work-flow-card">
-          <i class="fa-solid fa-lightbulb flow-item-icon"></i>
-          <h3>プロトタイプ</h3>
-          <p class="work-flow-desc">
-            ミーティングを基にワイヤーフレームを作成します。作成後もミーティングを重ねてより理想のウェブサイトへと近づけます。
+            デザインテンプレートや制作実績からお好みのデザインを選定いただくほか、納期や金額等の詳細な内容について話し合います。
           </p>
         </li>
         <li class="work-flow-card">
           <i class="fa-solid fa-code flow-item-icon"></i>
           <h3>コーディング</h3>
           <p class="work-flow-desc">
-            作成したプロトタイプと提供いただく素材(画像や文面)で実際にコーディングを行いウェブサイトの作成に取り掛かります。
+            ミーティングの内容を基にウェブサイトのコーディングを行います。
+          </p>
+          <p class="work-flow-desc-memo">
+            ※コーディング開始までにウェブサイトで使用する文章・画像素材等をお客様にご提供いただきます。　
+          </p>
+        </li>
+        <li class="work-flow-card">
+          <i class="fa-solid fa-wrench"></i>
+          <h3>修正・調整</h3>
+          <p class="work-flow-desc">
+            コーディングしたのちに細かい修正や調整を行うため、再度ミーティングやメールでのやり取りを行いより理想のウェブサイトへと近づけます。
           </p>
         </li>
         <li class="work-flow-card">
@@ -241,9 +251,70 @@
       </ul>
     </section>
 
+    <section id="templates">
+      <h2 class="numbered-heading">
+        <span class="numbered-heading-num">04.</span>Work Flow
+      </h2>
+      <div class="swiper" id="swiper-2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="assets/imgs/modern-minimalistic.png" alt="Preview of design template">
+              <a href="templates/modern-minimalistic/index.html" target="_blank">
+                <figcaption>
+                  モダン・ミニマル
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+
+          <div class="swiper-slide">
+            <figure>
+              <img src="assets/imgs/project-img.jpg" alt="Preview of design template">
+              <a href="https://www.google.com" target="_blank">
+                <figcaption>
+                  現在作成中
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+
+          <div class="swiper-slide">
+            <figure>
+              <img src="assets/imgs/project-img.jpg" alt="Preview of design template">
+              <a href="https://www.google.com" target="_blank">
+                <figcaption>
+                  現在作成中
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </figcaption>
+              </a>
+            </figure>
+          </div>
+        </div>
+
+        <div class="swiper-custom-nav">
+          <svg id="nav-left" width="48" height="48" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
+            <path
+              d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm7.58 0l5.988-5.995 1.414 1.416-4.574 4.579 4.574 4.59-1.414 1.416-5.988-6.006z" />
+          </svg>
+          <svg id="nav-right" width="48" height="48" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.568 18.005l-1.414-1.415 4.574-4.59-4.574-4.579 1.414-1.416 5.988 5.995-5.988 6.005z" />
+          </svg>
+        </div>
+
+
+        <div class="swiper-custom-pagination"></div>
+      </div>
+    </section>
+
     <section id="contact">
       <h2 class="numbered-heading">
-        <span class="numbered-heading-num">04.</span>Get In Touch
+        <span class="numbered-heading-num">05.</span>Get In Touch
       </h2>
       <form class="contact-form" action="https://formsubmit.co/tomoki_ota@outlook.com" method="post">
         <div class="input-group">
@@ -269,6 +340,12 @@
       </p>
     </nav>
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="/assets/js/script.js" async></script>
 
 </body>
 

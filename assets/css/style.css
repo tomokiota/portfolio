@@ -5,6 +5,7 @@ Accent color: #22d3ee
 Header Font color: #f8fafc
 Card color: #17202e
 2nd Card Color: #253248
+Breakpoints: mobile: 414px, tablet: 769px, desktop: 1345px
 */
 
 :root {
@@ -462,6 +463,10 @@ ul.about-skills .skill::before {
     font-size: 1.6rem;
 }
 
+.work-flow-desc-memo {
+    font-size: 12px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -555,6 +560,93 @@ section {
     padding: 60px 0;
     max-width: 900px;
     margin: 0px auto;
+}
+
+/* Swiper JS */
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.swiper-slide figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide figcaption {
+    position: absolute;
+    bottom: 0;
+    color: var(--main-font-color);
+    font-size: 12px;
+    line-height: 29px;
+    background-color: var(--second-card-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0 4px 0 0;
+    padding: 0 9px;
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.swiper-slide-active figcaption {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.swiper-custom-nav {
+    display: none;
+}
+
+.swiper-custom-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 16px;
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 500;
+    color: var(--main-font-color);
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    opacity: 1;
+    text-align: center;
+}
+
+.swiper-custom-pagination .number {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.swiper-custom-pagination .line {
+    opacity: 0.3;
+    height: 4px;
+    width: 12px;
+    background-color: var(--main-font-color);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active .number {
+    opacity: 1;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active .line {
+    width: 32px;
+    opacity: 1;
+    background-color: var(--accent-color);
 }
 
 @media only screen and (min-width: 769px) {
@@ -683,6 +775,39 @@ section {
         bottom: 50px;
         font-size: 32px;
     }
+
+    .swiper-slide img {
+        height: 20rem;
+    }
+
+    .swiper-slide figcaption {
+        font-size: 14px;
+        line-height: 29px;
+        padding: 5px 25px;
+    }
+
+    .swiper-custom-nav {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        padding: 0 2rem;
+    }
+
+    .swiper-custom-nav svg {
+        fill: var(--card-color);
+        cursor: pointer;
+        opacity: 0.75;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .swiper-custom-nav svg:hover {
+        opacity: 1;
+    }
 }
 
 @media only screen and (min-width: 1345px) {
@@ -696,5 +821,15 @@ section {
 
     .footer-socials {
         left: 50px;
+    }
+
+    .swiper-slide img {
+        height: 40rem;
+    }
+
+    .swiper-slide figcaption {
+        font-size: 16px;
+        line-height: 29px;
+        padding: 8px 30px;
     }
 }

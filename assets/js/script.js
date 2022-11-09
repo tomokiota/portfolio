@@ -75,3 +75,36 @@ for (let j = 0; j < infoBtn.length; j++) {
         }
     });
 }
+
+// Swiper JS
+new Swiper("#swiper-2", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 16,
+    lazyLoading: true,
+    loop: true,
+    keyboard: {
+        enabled: true,
+    },
+    navigation: {
+        nextEl: "#nav-right",
+        prevEl: "#nav-left",
+    },
+    pagination: {
+        el: "#swiper-2 .swiper-custom-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return `
+            <div class=${className}>
+            <span class="number">${index + 1}</span>
+            <span class="line"></span>
+            </div>
+            `;
+        },
+    },
+    breakpoints: {
+        769: {
+            slidesPerView: 1.5,
+        },
+    },
+});
