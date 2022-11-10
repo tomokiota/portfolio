@@ -322,7 +322,7 @@ ul.about-skills .skill {
     position: relative;
     margin-bottom: 10px;
     padding-left: 20px;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 ul.about-skills .skill::before {
@@ -451,12 +451,12 @@ ul.about-skills .skill::before {
 
 .work-flow-card i {
     color: var(--header-font-color);
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .work-flow-card h3 {
     color: var(--accent-color);
-    font-size: 22px;
+    font-size: 2.2rem;
 }
 
 .work-flow-desc {
@@ -464,7 +464,7 @@ ul.about-skills .skill::before {
 }
 
 .work-flow-desc-memo {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .contact-form {
@@ -483,7 +483,7 @@ ul.about-skills .skill::before {
     border: 1px solid var(--main-font-color);
     background: var(--header-font-color);
     display: block;
-    font-size: 13px;
+    font-size: 1.3rem;
     width: 100%;
     outline: none;
 }
@@ -539,11 +539,11 @@ footer {
     margin: 0;
     list-style-type: none;
     margin: 0px auto 10px;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 p.credit {
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 10px;
 }
 
@@ -558,7 +558,7 @@ a {
 
 section {
     padding: 60px 0;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0px auto;
 }
 
@@ -580,7 +580,7 @@ section {
     position: absolute;
     bottom: 0;
     color: var(--main-font-color);
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 29px;
     background-color: var(--second-card-color);
     display: flex;
@@ -609,7 +609,7 @@ section {
     justify-content: center;
     padding-top: 25px;
     gap: 16px;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 29px;
     font-weight: 500;
     color: var(--main-font-color);
@@ -666,6 +666,10 @@ section {
         display: block;
     }
 
+    .navbar {
+        max-width: 1000px;
+    }
+
     .desktop-only .nav-links {
         display: flex;
         justify-content: space-between;
@@ -679,12 +683,31 @@ section {
         counter-increment: nav-counter 1;
         margin: 0px 5px;
         position: relative;
-        font-size: 13px;
+        font-size: 1.4rem;
     }
 
     .desktop-only .nav-links .nav-link::before {
         content: "0" counter(nav-counter) ".";
         color: var(--accent-color);
+    }
+
+    .desktop-only .nav-links .nav-link:last-of-type a {
+        border: 1px solid var(--accent-color);
+        border-radius: 4px;
+        padding: 8px 18px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .desktop-only .nav-links .nav-link:last-of-type a:hover {
+        background-color: var(--accent-color);
+    }
+
+    .desktop-only .nav-links .nav-link:last-of-type a:hover {
+        color: var(--main-bg-color);
+    }
+
+    .desktop-only .nav-links .nav-link:last-of-type::before {
+        content: "";
     }
 
     .desktop-only .nav-links .nav-link a {
@@ -737,7 +760,7 @@ section {
     .work-live-site {
         display: inline-block;
         padding: 20px 28px;
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 
     .work-flow-cards {
@@ -773,7 +796,7 @@ section {
         left: 40px;
         right: auto;
         bottom: 50px;
-        font-size: 32px;
+        font-size: 3.2rem;
     }
 
     .swiper-slide img {
@@ -781,7 +804,7 @@ section {
     }
 
     .swiper-slide figcaption {
-        font-size: 14px;
+        font-size: 1.4rem;
         line-height: 29px;
         padding: 5px 25px;
     }
@@ -828,7 +851,7 @@ section {
     }
 
     .swiper-slide figcaption {
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 29px;
         padding: 8px 30px;
     }
