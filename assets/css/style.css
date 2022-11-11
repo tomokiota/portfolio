@@ -498,7 +498,7 @@ ul.about-skills .skill::before {
     top: 50%;
     transform: translateY(-50%);
     left: 10px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     transition: all 0.2s ease-in-out;
 }
 
@@ -523,7 +523,8 @@ ul.about-skills .skill::before {
 
 .textarea-group label {
     padding: 0 10px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .contact-form textarea {
@@ -542,6 +543,7 @@ ul.about-skills .skill::before {
 .contact-form .textarea-group label:has(+ textarea:active),
 .contact-form .textarea-group label:has(+ textarea:not(:placeholder-shown)) {
     color: var(--accent-color);
+    font-size: 1.2rem;
 }
 
 .contact-form textarea:focus {
